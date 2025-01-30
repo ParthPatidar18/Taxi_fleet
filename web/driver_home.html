@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Driver Dashboard</title>
+    <link rel="stylesheet" href="driver_home.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <ul class="nav-list">
+                <li><a href="#" id="profileSection">Profile</a></li>
+                <li><a href="UpcomingRide" id="upcomingRideSection">Upcoming Ride</a></li>
+                <li><a href="#" id="completedRideSection">Completed Ride</a></li>
+                <li><a href="locationUpdateSection" id="locationUpdateSection">Location Update</a></li>
+                <li><a href="GetRide" id="activeStatusSection">Get a ride</a></li>
+                <li><a href="#" id="logoutBtn">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Dashboard Content -->
+    <div class="content">
+        <section id="profileContent" class="section">
+            <h2>Profile</h2>
+            <p>Update your profile details here.</p>
+        </section>
+
+        <section id="upcomingRideContent" class="section" style="display: none;">
+            <h2>Upcoming Ride</h2>
+            <p>No upcoming rides available at the moment.</p>
+        </section>
+
+        <section id="completedRideContent" class="section" style="display: none;">
+            <h2>Completed Ride</h2>
+            <p>View your completed rides here.</p>
+        </section>
+
+        <section id="locationUpdateContent" class="section" style="display: none;">
+            <h2>Location Update</h2>
+            <p>Update your current location for ride assignment.</p>
+            
+    <h2>Location Update</h2>
+    <form action="locationUpdateSection" method="POST">
+        <label for="location">Enter Current Location:</label>
+        <input type="text" id="location" name="location" placeholder="Enter your current location" required>
+        <button type="submit">Update Location</button>
+    </form>
+</section>
+        
+
+        <section id="activeStatusContent" class="section" style="display: none;">
+            <h2>Active/Inactive</h2>
+            <button id="toggleStatusBtn">Set as Active</button>
+        </section>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="driver_home.js"></script>
+</body>
+</html>

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taxi Booking Service</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="container">
+            <h1>Taxi Service</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#promotions">Promotions</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#app-download">Download App</a></li>
+                    <li><a href="admin_home.html">Admin</a></li>
+
+                    <li><a href="#" id="openCareerModal">Join as Driver</a></li>
+                    <li><a href="#" id="loginBtn">Login/Signup</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="hero">
+        <div class="container">
+            <h2>Book Your Ride</h2>
+            <form id="searchForm">
+                <div class="input-group">
+                    <label for="pickupLocation">Pickup Location</label>
+                    <input type="text" id="pickupLocation" placeholder="Enter your pickup location">
+                </div>
+                <div class="input-group">
+                    <label for="dropoffLocation">Drop-off Location</label>
+                    <input type="text" id="dropoffLocation" placeholder="Enter your drop-off location">
+                </div>
+                <div class="input-group">
+                    <label for="rideType">Ride Type</label>
+                    <select id="rideType">
+                        <option value="economy">Economy</option>
+                        <option value="premium">Premium</option>
+                        <option value="suv">SUV</option>
+                    </select>
+                </div>
+                <div class="input-group"><button type="button" id="findRideBtn">Find a Ride</button>
+
+</div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Fare Estimates Placeholder -->
+    <section id="fareEstimates" class="container">
+        <h2>Available Rides & Fare Estimates</h2>
+        <div id="rideOptions"></div>
+    </section>
+
+    <!-- Promotions Section -->
+    <section id="promotions" class="container">
+        <h2>Get 20% Off Your First Ride!</h2>
+        <p>Sign up now and get a discount on your first ride.</p>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container">
+        <h2>What Our Customers Say</h2>
+        <div class="testimonial">
+            <p>"Excellent service, clean cars, and professional drivers!"</p>
+            <p>- Sarah</p>
+        </div>
+        <div class="testimonial">
+            <p>"The booking process was seamless, and the driver arrived on time."</p>
+            <p>- John</p>
+        </div>
+    </section>
+
+    <!-- App Download Section -->
+    <section id="app-download" class="container">
+        <h2>Download Our App</h2>
+        <a href="#" class="app-store">App Store</a>
+        <a href="#" class="google-play">Google Play</a>
+    </section>
+
+    <!-- Login/Signup Modal -->
+<div id="login-modal" class="modal" style="display: none;">
+  <div class="modal-content">
+    <span class="close-btn-login" onclick="closeLoginModal()">×</span>
+    <!-- Login form content -->
+    <h2>Login or Sign Up</h2>
+      <form id="login-form" action="Login">
+          <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          <input type="password" id="password" name="pwd" placeholder="Enter your password" required>
+        <button type="submit" class="btn">Login</button>
+        <a href="registration.html" class="btn">Click here for signup</a>
+        <a href="Forget_pwd" class="btn">Forgot Password</a>
+
+      </form>
+  </div>
+</div>
+
+<!-- Career Modal -->
+<div id="career-modal" class="modal" style="display: none;">
+  <div class="container2">
+    <span class="close-btn-career" onclick="closeCareerModal()">×</span>
+    <!-- Career form content -->
+    <h2>Carrer Registration</h2>
+     <form id="career-form" action="DriverRegistration" method="post">
+        <input type="email" id="email1" name="email" placeholder="Enter your email" required>
+        <input type="password" id="password1" name="pwd" placeholder="Enter your password" required>
+        <button type="submit" class="btn">Register</button> 
+      </form>
+  </div>
+</div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

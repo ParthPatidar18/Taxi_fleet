@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <link rel="stylesheet" href="admin_home.css">
+</head>
+<body>
+    <div class="admin-container">
+        <nav class="admin-nav">
+            <h2>Admin Panel</h2>
+            <ul>
+                <li><a href="ShowRegisteredTaxis" onclick="showSection('registeredTaxis')">Show Registered Taxis</a></li>
+                <li><a href="RequestToJoin" onclick="showSection('requestToJoin')">Request to Join</a></li>
+                <li><a href="#" onclick="showSection('revenueGenerated')">Revenue Generated</a></li>
+                <li><a href="Logout" onclick="logout()">Logout</a></li>
+            </ul>
+        </nav>
+
+        <div class="admin-main">
+            <header>
+                <h1>Welcome, Parth</h1>
+            </header>
+
+            <div id="registeredTaxis" class="section hidden">
+                <h2>Registered Taxis</h2>
+                <p>List of all registered taxis will appear here.</p>
+            </div>
+
+            <div id="requestToJoin" class="section hidden">
+                <h2>Request to Join</h2>
+                <p>Driver requests to join will appear here.</p>
+            </div>
+
+            <div id="revenueGenerated" class="section hidden">
+                <h2>Revenue Generated</h2>
+                <p>Revenue reports will appear here.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="admin_home.js"></script>
+</body>
+</html>

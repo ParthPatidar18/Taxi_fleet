@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard</title>
+        <link rel="stylesheet" href="user_home_style.css">
+
+</head>
+<body>
+
+    <!-- Customer Dashboard Navigation Bar -->
+    <header class="dashboard-header">
+        <nav>
+            <h1>Welcome</h1>
+            <ul>
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="UpcomingRide">Upcoming Rides</a></li>
+                <li><a href="#history">Ride History</a></li>
+                <li><a href="#saver">Saved-location</a></li>
+                <li><a href="#payment">Payment Methods</a></li>
+                <li> <a href="Logout">Logout</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Profile Section (as part of the dashboard) -->
+    <div class="profile-section" id="profile">
+        <div class="profile-info">
+            <img src="profile.jpg" alt="Profile Picture">
+            <h2>hello sir</h2>
+        </div>
+        <a href="#">Edit Profile</a>
+    </div>
+
+    <!-- Ride Booking Section -->
+    <div class="ride-booking" id="ride-booking">
+        <h2>Book a Ride</h2>
+        <form id="ride-form" action="BookRide" method="post">
+            <input type="text" name="pickup" id="pickup" placeholder="Pickup Location" required>
+            <input type="text" name="dropoff" id="dropoff" placeholder="Drop-off Location" required>
+            <input type="datetime-local" name="ride-time" id="ride-time" required>
+            <select id="ride-type" required>
+                <option value="" disabled selected>Select Ride Type</option>
+                <option value="economy">Economy</option>
+                <option value="premium">Premium</option>
+                <option value="suv">SUV</option>
+            </select>
+            <button type="submit">Book Ride</button>
+        </form>
+    </div>
+        <!-- upcoming Section -->
+
+<div class="upcoming-rides" id="rides">
+            <h2>Upcoming Rides</h2>
+            <div class="ride">
+                <p><strong>Pickup:</strong> 123 Main St</p>
+                <p><strong>Drop-off:</strong> 456 Oak St</p>
+                <p><strong>Driver:</strong> John Smith (SUV, XYZ 1234)</p>
+                <p><strong>ETA:</strong> 10 mins</p>
+                <button onclick="modifyRide()">Modify</button>
+                <button onclick="cancelRide()">Cancel</button>
+            </div>
+        </div>
+        <!-- Ride History Section -->
+        <div class="ride-history" id="history">
+            <h2>Ride History</h2>
+            <div class="past-ride">
+                <p><strong>Pickup:</strong> 789 Elm St</p>
+                <p><strong>Drop-off:</strong> 321 Maple St</p>
+                <p><strong>Date:</strong> September 25, 2024</p>
+                <p><strong>Fare:</strong> $15.00</p>
+                <button onclick="rateDriver()">Rate Driver</button>
+            </div>
+        </div>
+                <!-- saved-locations -->
+
+        <div class="saved-locations">
+            <h2>Saved Locations</h2>
+            <p><strong>Home:</strong> 123 Main St</p>
+            <p><strong>Work:</strong> 789 Elm St</p>
+        </div>
+
+    <!-- Main Content Section -->
+    <div class="main-content">
+        <h2>Upcoming Rides</h2>
+        <!-- Content related to rides will be shown here -->
+    </div>
+        <!-- payment -->
+
+    <div class="payment" id="payment">
+            <h2>Payment & Wallet</h2>
+            <p><strong>Payment Method:</strong> Visa ****1234</p>
+            <p><strong>Account Balance:</strong> $25.00</p>
+            <button onclick="managePayment()">Manage Payment</button>
+        </div>
+
+    <!-- Logout Section -->
+   
+
+    
+
+</body>
+</html>
